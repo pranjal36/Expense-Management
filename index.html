@@ -1,0 +1,83 @@
+
+<html>
+	<head>
+        <title>Expense List </title>
+        
+    	<meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+        
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"/> 
+  
+		<script
+			defer
+			src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"
+			integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP"
+			crossorigin="anonymous"
+        ></script>  
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<span class="navbar-brand mb-0 h1">KHARCHA 📝</span>
+			<span class="navbar-brand mb-0 h1" id="headingTotal"></span>
+		</nav>
+		<div class="container-fluid bg-light" style="min-height: 100vh">
+			<div class="container">
+				<div class="jumbotron mt-4">
+					<div class="input-group mb-3">
+						<input
+							type="number"
+							class="form-control"
+							id="inputAmount"
+							placeholder="Amount spent"
+							aria-label="Amount spent"
+							aria-describedby="spent in rupee"
+						/>
+						<div class="input-group-append">
+							<span class="input-group-text" id="spent in rupee">Rs</span>
+						</div>
+					</div>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="spent at">@</span>
+						</div>
+						<input
+							type="text"
+							class="form-control"
+							id="inputDesc"
+							placeholder="spent On"
+							aria-label="spent On"
+							aria-describedby="spent at"
+						/>
+						<div class="input-group-append">
+							<button class="btn btn-outline-primary" type="button" id="btnAddExpense">Add</button>
+						</div>
+					</div>
+                </div>
+                
+                <div>
+                    <ul class="list-unstyled ">
+                        <li><h4 class="text-info text-center ">Your Expenses here</h4></li>
+                       <hr>
+                        </ul>
+                </div>
+              
+
+				<div>
+                    <ul class="list-group" id="expenseTable"></ul>
+                  
+                  
+				</div>
+			</div>
+        </div>
+        <div id="piechart" style="width: 900px; height: 500px;"></div>
+	<script src="magic.js" ></script>
+    </body>
+</html>
